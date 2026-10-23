@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   /* 섹션 카드 안에 있어도 화면 왼쪽 끝~오른쪽 끝까지 펼칩니다.
-     100cqw = body 너비(스크롤바 제외, global.css의 container-type 참고) */
+     100cqw = body 너비(스크롤바 제외, index.css의 container-type 참고) */
   width: 100cqw;
   margin-left: calc(50% - 50cqw);
   height: 60px;

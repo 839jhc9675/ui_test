@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import Box from '@mui/material/Box'
-import ButtonBase from '@mui/material/ButtonBase'
-import Grid from '@mui/material/Grid'
-import Stack from '@mui/material/Stack'
-import Typography from '@mui/material/Typography'
-import { alpha } from '@mui/material/styles'
+import { useState } from 'react';
+import Box from '@mui/material/Box';
+import ButtonBase from '@mui/material/ButtonBase';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import { alpha } from '@mui/material/styles';
 
-// 마우스 호버와 키보드 포커스(Tab) 모두에서 효과가 보이도록 같은 선택자로 묶습니다.
-const ACTIVE = '&:hover, &:focus-visible'
+/** 마우스 호버와 키보드 포커스(Tab) 모두에서 효과가 보이도록 같은 선택자로 묶습니다. */
+const ACTIVE = '&:hover, &:focus-visible';
 
 const EFFECTS = [
   {
@@ -89,9 +89,9 @@ const EFFECTS = [
     description: '가려진 안내 문구가 올라옵니다',
     overlay: '자세히 보기 →',
   },
-]
+];
 
-// 공통 카드 스타일: 위치·전환 효과는 여기서, 효과별 차이는 EFFECTS[].sx에서
+/** 공통 카드 스타일: 위치·전환 효과는 여기서, 효과별 차이는 EFFECTS[].sx에서 */
 const baseSx = {
   position: 'relative',
   overflow: 'hidden',
@@ -109,9 +109,9 @@ const baseSx = {
   color: 'text.primary',
   transition: 'all 0.25s ease',
   '@media (prefers-reduced-motion: reduce)': { transition: 'none' },
-}
+};
 
-// 오버레이 카드: 호버 시 아래에서 덮개가 올라옵니다
+/** 오버레이 카드: 호버 시 아래에서 덮개가 올라옵니다 */
 const overlaySx = {
   '& .hover-overlay': {
     position: 'absolute',
@@ -126,37 +126,48 @@ const overlaySx = {
     transition: 'transform 0.3s ease',
   },
   [ACTIVE]: { '& .hover-overlay': { transform: 'translateY(0)' } },
-}
+};
 
-// ButtonBase로 만든 호버 효과 카드 8종 섹션
-export default function HoverSection() {
-  const [lastHovered, setLastHovered] = useState(null)
+/**
+ * HoverSection 컴포넌트
+ *
+ * ButtonBase로 만든 호버 효과 카드 8종 섹션
+ *
+ * Props: 없음
+ *
+ * Example usage:
+ * <HoverSection />
+ */
+function HoverSection() {
+  const [lastHovered, setLastHovered] = useState(null);
 
   return (
-    <Stack spacing={2}>
-      <Grid container spacing={2}>
-        {EFFECTS.map((effect) => (
-          <Grid key={effect.id} size={{ xs: 12, sm: 6, md: 3 }}>
+    <Stack spacing={ 2 }>
+      <Grid container spacing={ 2 }>
+        { EFFECTS.map((effect) => (
+          <Grid key={ effect.id } size={{ xs: 12, sm: 6, md: 3 }}>
             <ButtonBase
               focusRipple
-              onMouseEnter={() => setLastHovered(effect.title)}
-              onFocus={() => setLastHovered(effect.title)}
-              sx={[baseSx, effect.overlay ? overlaySx : effect.sx]}
+              onMouseEnter={ () => setLastHovered(effect.title) }
+              onFocus={ () => setLastHovered(effect.title) }
+              sx={ [baseSx, effect.overlay ? overlaySx : effect.sx] }
             >
-              <Typography variant="subtitle1" fontWeight={600}>
-                {effect.title}
+              <Typography variant="subtitle1" fontWeight={ 600 }>
+                { effect.title }
               </Typography>
               <Typography variant="body2" sx={{ opacity: 0.75 }}>
-                {effect.description}
+                { effect.description }
               </Typography>
-              {effect.overlay && <Box className="hover-overlay">{effect.overlay}</Box>}
+              { effect.overlay && <Box className="hover-overlay">{ effect.overlay }</Box> }
             </ButtonBase>
           </Grid>
-        ))}
+        )) }
       </Grid>
       <Typography variant="body2" color="text.secondary">
-        마지막으로 호버한 카드: {lastHovered ?? '(없음)'} · Tab 키로 이동해도 같은 효과가 보입니다.
+        마지막으로 호버한 카드: { lastHovered ?? '(없음)' } · Tab 키로 이동해도 같은 효과가 보입니다.
       </Typography>
     </Stack>
-  )
+  );
 }
+
+export default HoverSection;

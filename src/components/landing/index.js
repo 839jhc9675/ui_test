@@ -1,28 +1,29 @@
-// 섹션 레지스트리 — 배열 순서대로 화면에 렌더링됩니다.
-// 새 섹션 추가 방법:
-//   1. src/components/sections/ 에 섹션 컴포넌트 파일 생성 (예: ButtonSection.jsx)
-//   2. 아래에 import 후 sections 배열에 { id, title, description, component } 추가
-//
-// 예시:
-// import ButtonSection from './ButtonSection.jsx'
-// { id: 'button', title: 'Button', description: '버튼 UI', component: ButtonSection },
-
-import AnimationSection from './AnimationSection.jsx'
-import ButtonSection from './ButtonSection.jsx'
-import CardSection from './CardSection.jsx'
-import CheckboxSection from './CheckboxSection.jsx'
-import DragDropSection from './DragDropSection.jsx'
-import DropdownSection from './DropdownSection.jsx'
-import FlexNavigationSection from './FlexNavigationSection.jsx'
-import HoverSection from './HoverSection.jsx'
-import InputSection from './InputSection.jsx'
-import ModalSection from './ModalSection.jsx'
-import NavigationSection from './NavigationSection.jsx'
-import RadioSection from './RadioSection.jsx'
-import ScrollSection from './ScrollSection.jsx'
-import SidebarSection from './SidebarSection.jsx'
-import SliderSection from './SliderSection.jsx'
-import SwipeSection from './SwipeSection.jsx'
+/**
+ * 섹션 레지스트리 — 배열 순서대로 화면에 렌더링됩니다.
+ * 새 섹션 추가 방법:
+ *   1. src/components/landing/ 에 섹션 컴포넌트 파일 생성 (예: button-section.jsx)
+ *   2. 아래에 import 후 sections 배열에 { id, title, description, component } 추가
+ *
+ * 예시:
+ * import ButtonSection from './button-section.jsx';
+ * { id: 'button', title: 'Button', description: '버튼 UI', component: ButtonSection },
+ */
+import AnimationSection from './animation-section.jsx';
+import ButtonSection from './button-section.jsx';
+import CardSection from './card-section.jsx';
+import CheckboxSection from './checkbox-section.jsx';
+import DragDropSection from './drag-drop-section.jsx';
+import DropdownSection from './dropdown-section.jsx';
+import FlexNavigationSection from './flex-navigation-section.jsx';
+import HoverSection from './hover-section.jsx';
+import InputSection from './input-section.jsx';
+import ModalSection from './modal-section.jsx';
+import NavigationSection from './navigation-section.jsx';
+import RadioSection from './radio-section.jsx';
+import ScrollSection from './scroll-section.jsx';
+import SidebarSection from './sidebar-section.jsx';
+import SliderSection from './slider-section.jsx';
+import SwipeSection from './swipe-section.jsx';
 
 const sections = [
   {
@@ -121,6 +122,6 @@ const sections = [
     description: 'flexbox(justify-content: space-between)로 로고와 메뉴 5개를 양 끝 정렬한 화면 가로 전체 네비게이션. 메뉴에 마우스를 올리면 흰색으로 바뀝니다.',
     component: FlexNavigationSection,
   },
-]
+];
 
-export default sections
+export default sections;
