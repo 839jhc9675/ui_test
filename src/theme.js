@@ -2,15 +2,21 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-    mode: 'light',
-    primary: { main: '#1976d2' },
-    secondary: { main: '#9c27b0' },
-    background: { default: '#f7f8fa', paper: '#ffffff' },
+    primary: {
+      main: '#1976d2',
+    },
+    secondary: {
+      main: '#dc004e',
+    },
   },
   typography: {
-    fontFamily: ['Roboto', 'Pretendard', 'Apple SD Gothic Neo', 'sans-serif'].join(','),
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    h1: {
+      fontSize: '2.125rem',
+      fontWeight: 500,
+    },
   },
-  shape: { borderRadius: 8 },
+  spacing: 8,
 });
 
 export default theme;
