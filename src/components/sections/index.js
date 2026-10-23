@@ -1,7 +1,7 @@
 /**
  * 섹션 레지스트리 — 배열 순서대로 화면에 렌더링됩니다.
  * 새 섹션 추가 방법:
- *   1. src/components/landing/ 에 섹션 컴포넌트 파일 생성 (예: button-section.jsx)
+ *   1. src/components/sections/ 에 섹션 컴포넌트 파일 생성 (예: button-section.jsx)
  *   2. 아래에 import 후 sections 배열에 { id, title, description, component } 추가
  *
  * 예시:

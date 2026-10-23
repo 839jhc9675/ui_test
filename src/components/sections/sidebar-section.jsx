@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 
 /**
  * 페이지에 렌더링된 섹션(<section id>)에서 링크 목록을 만듭니다.
- * 섹션 레지스트리(landing/index.js)를 import하면 순환 참조가 생기므로 DOM에서 읽습니다.
+ * 섹션 레지스트리(sections/index.js)를 import하면 순환 참조가 생기므로 DOM에서 읽습니다.
  */
 const readSectionLinks = () =>
   Array.from(document.querySelectorAll('main section[id]')).map((section) => ({

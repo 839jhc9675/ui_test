@@ -28,7 +28,12 @@ function SectionContainer({ id, index, title, description, children }) {
             Section { String(index).padStart(2, '0') }
           </Typography>
         ) }
-        <Typography variant="h5" component="h2" fontWeight={ 600 }>
+        <Typography
+          variant="h5"
+          component="h2"
+          fontWeight={ 600 }
+          sx={{ fontSize: { xs: '1.25rem', md: '1.5rem' }, lineHeight: 1.3 }}
+        >
           { title }
         </Typography>
         { description && (

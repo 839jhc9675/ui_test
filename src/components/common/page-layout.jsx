@@ -21,7 +21,13 @@ function PageLayout({ title, subtitle, children }) {
   return (
     <Box component="main">
       <Box component="header" sx={{ mb: { xs: 4, md: 6 } }}>
-        <Typography variant="h4" component="h1" fontWeight={ 700 } gutterBottom>
+        <Typography
+          variant="h4"
+          component="h1"
+          fontWeight={ 700 }
+          gutterBottom
+          sx={{ fontSize: { xs: '2rem', md: '3rem' }, lineHeight: 1.2 }}
+        >
           { title }
         </Typography>
         { subtitle && (

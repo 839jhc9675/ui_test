@@ -1,4 +1,4 @@
-import './flex-navigation-section.css';
+import '../../styles/flex-navigation.css';
 
 const MENUS = ['홈', '소개', '상품', '연락처', '설정'];
 
@@ -6,7 +6,7 @@ const MENUS = ['홈', '소개', '상품', '연락처', '설정'];
  * FlexNavigationSection 컴포넌트
  *
  * flexbox로 직접 만든 네비게이션: 로고(왼쪽) ↔ 메뉴들(오른쪽) 양 끝 정렬
- * 스타일은 같은 폴더의 flex-navigation-section.css 에 있습니다.
+ * 스타일은 src/styles/flex-navigation.css 에 있습니다.
  *
  * Props: 없음
  *
