@@ -118,7 +118,7 @@ const sections = [
   {
     id: 'flex-navigation',
     title: 'Flex Navigation',
-    description: 'flexbox(justify-content: space-between)로 로고와 메뉴 5개를 양 끝 정렬한 네비게이션. 메뉴에 마우스를 올리면 흰색으로 바뀝니다.',
+    description: 'flexbox(justify-content: space-between)로 로고와 메뉴 5개를 양 끝 정렬한 화면 가로 전체 네비게이션. 메뉴에 마우스를 올리면 흰색으로 바뀝니다.',
     component: FlexNavigationSection,
   },
 ]

@@ -1,0 +1,32 @@
+/* CSS 초기화 */
+* {
+  box-sizing: border-box;
+}
+
+/* HTML, Body 초기화 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Root 앱 컨테이너 설정 */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 섹션 바로가기 링크 이동 시 부드럽게 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* 섹션 안의 요소가 cqw 단위로 화면 전체 너비(스크롤바 제외)를 알 수 있게 합니다. */
+  container-type: inline-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

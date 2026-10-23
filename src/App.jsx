@@ -1,22 +1,32 @@
-import Typography from '@mui/material/Typography'
-import PageLayout from './components/layout/PageLayout.jsx'
-import SectionContainer from './components/layout/SectionContainer.jsx'
-import sections from './components/sections/index.js'
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import UiTestPage from './pages/ui-test-page.jsx';
 
-export default function App() {
+/**
+ * App 컴포넌트
+ *
+ * 전체 페이지 중앙정렬 레이아웃을 제공하는 최상위 컴포넌트
+ *
+ * Props: 없음
+ *
+ * Example usage:
+ * <App />
+ */
+function App() {
   return (
-    <PageLayout title="UI Test" subtitle="16개 UI 요소를 섹션 단위로 확인하는 페이지">
-      {sections.length === 0 ? (
-        <Typography color="text.secondary">
-          아직 추가된 섹션이 없습니다. src/components/sections/index.js 에 섹션을 등록하세요.
-        </Typography>
-      ) : (
-        sections.map(({ id, title, description, component: Section }, i) => (
-          <SectionContainer key={id} id={id} index={i + 1} title={title} description={description}>
-            <Section />
-          </SectionContainer>
-        ))
-      )}
-    </PageLayout>
-  )
+    <Box sx={{
+      width: '100%',
+      minHeight: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      py: { xs: 2, md: 4 },
+    }}>
+      <Container maxWidth="md" sx={{ py: 4, px: { xs: 2, md: 3 } }}>
+        <UiTestPage />
+      </Container>
+    </Box>
+  );
 }
+
+export default App;

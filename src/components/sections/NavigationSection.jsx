@@ -5,20 +5,11 @@ import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
-import SvgIcon from '@mui/material/SvgIcon'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
+import { MenuIcon } from '../ui/index.js'
 
 const MENUS = ['홈', '소개', '서비스', '연락처']
-
-// @mui/icons-material 의존성 없이 쓰는 햄버거 아이콘
-function MenuIcon() {
-  return (
-    <SvgIcon>
-      <path d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z" />
-    </SvgIcon>
-  )
-}
 
 // AppBar 네비게이션: sm 이상은 메뉴 버튼, 그보다 좁으면 햄버거 메뉴
 export default function NavigationSection() {

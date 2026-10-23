@@ -7,9 +7,9 @@ import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import Paper from '@mui/material/Paper'
 import Stack from '@mui/material/Stack'
-import SvgIcon from '@mui/material/SvgIcon'
 import Typography from '@mui/material/Typography'
 import Zoom from '@mui/material/Zoom'
+import { ArrowUpIcon } from '../ui/index.js'
 
 const ITEMS = Array.from({ length: 30 }, (_, i) => ({
   id: i + 1,
@@ -19,15 +19,6 @@ const ITEMS = Array.from({ length: 30 }, (_, i) => ({
 
 // 이 값(px)보다 아래로 스크롤하면 Top 버튼이 나타납니다.
 const SHOW_TOP_BUTTON_AT = 100
-
-// @mui/icons-material 의존성 없이 쓰는 위쪽 화살표 아이콘
-function ArrowUpIcon() {
-  return (
-    <SvgIcon>
-      <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z" />
-    </SvgIcon>
-  )
-}
 
 // 고정 높이(300px) 스크롤 컨테이너 + 스크롤 위치에 따라 나타나는 Top 버튼 섹션
 export default function ScrollSection() {

@@ -7,17 +7,8 @@ import DialogContentText from '@mui/material/DialogContentText'
 import DialogTitle from '@mui/material/DialogTitle'
 import IconButton from '@mui/material/IconButton'
 import Stack from '@mui/material/Stack'
-import SvgIcon from '@mui/material/SvgIcon'
 import Typography from '@mui/material/Typography'
-
-// @mui/icons-material 의존성 없이 쓰는 닫기(X) 아이콘
-function CloseIcon() {
-  return (
-    <SvgIcon>
-      <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-    </SvgIcon>
-  )
-}
+import { CloseIcon } from '../ui/index.js'
 
 // 닫힌 방법(reason)별 안내 문구 — backdropClick, escapeKeyDown은 MUI가 넘겨주는 값
 const RESULT_TEXT = {

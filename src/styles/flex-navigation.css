@@ -1,0 +1,65 @@
+/* Flex Navigation 섹션 — flexbox로 로고(왼쪽)와 메뉴들(오른쪽)을 양 끝 정렬 */
+
+/* 큰 네비게이션 박스: 가로 전체, 높이 60px, 배경 #2d3748 */
+.flex-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 섹션 카드 안에 있어도 화면 왼쪽 끝~오른쪽 끝까지 펼칩니다.
+     100cqw = body 너비(스크롤바 제외, global.css의 container-type 참고) */
+  width: 100cqw;
+  margin-left: calc(50% - 50cqw);
+  height: 60px;
+  padding: 0 24px;
+  background-color: #2d3748;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 1. 로고 박스: 흰색, 굵게, 20px */
+.flex-nav__logo {
+  flex-shrink: 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* 2. 메뉴들 박스: 항목 간격 15px, 좁은 화면에서는 가로 스크롤 */
+.flex-nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  margin: 0 0 0 16px;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.flex-nav__menu li {
+  flex-shrink: 0;
+}
+
+/* 메뉴 항목: 연한 회색, 16px → 호버 시 흰색 */
+.flex-nav__link {
+  display: block;
+  padding: 4px 0;
+  color: #cbd5e0;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.flex-nav__link:hover {
+  color: #ffffff;
+}
+
+/* 키보드(Tab)로 이동할 때도 위치가 보이도록 */
+.flex-nav__link:focus-visible {
+  color: #ffffff;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

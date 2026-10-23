@@ -4,6 +4,8 @@ html {
 }
 
 body {
+  /* 섹션 안의 요소가 cqw 단위로 화면 전체 너비(스크롤바 제외)를 알 수 있게 합니다. */
+  container-type: inline-size;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
