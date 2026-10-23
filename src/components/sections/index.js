@@ -13,6 +13,7 @@ import CardSection from './CardSection.jsx'
 import CheckboxSection from './CheckboxSection.jsx'
 import DragDropSection from './DragDropSection.jsx'
 import DropdownSection from './DropdownSection.jsx'
+import FlexNavigationSection from './FlexNavigationSection.jsx'
 import HoverSection from './HoverSection.jsx'
 import InputSection from './InputSection.jsx'
 import ModalSection from './ModalSection.jsx'
@@ -113,6 +114,12 @@ const sections = [
     title: 'Swipe',
     description: 'react-swipeable 무한 반복 이미지 슬라이더. 터치나 마우스로 좌우로 끌어 넘기고, 이전/다음 버튼과 하단 점으로도 이동할 수 있으며 현재 슬라이드 번호가 표시됩니다.',
     component: SwipeSection,
+  },
+  {
+    id: 'flex-navigation',
+    title: 'Flex Navigation',
+    description: 'flexbox(justify-content: space-between)로 로고와 메뉴 5개를 양 끝 정렬한 네비게이션. 메뉴에 마우스를 올리면 흰색으로 바뀝니다.',
+    component: FlexNavigationSection,
   },
 ]
 
